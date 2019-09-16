@@ -1,8 +1,8 @@
 {
-  "name": "liquor",
+  "name": "@crippler93/liquor",
   "version": "1.0.0",
   "description": "A CLI application to create RESTful CRUDs with express, mongoose and swagger",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +10,28 @@
     "type": "git",
     "url": "git+https://github.com/Crippler93/Liquor.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "@crippler93/liquor": "bin/liquor",
+    "liquor": "bin/liquor"
+  },
   "keywords": [
-    "node"
+    "cli",
+    "node",
+    "express",
+    "REST",
+    "MongoDB"
   ],
   "author": "Luis Chavez (Crippler93)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Crippler93/Liquor/issues"
   },
-  "homepage": "https://github.com/Crippler93/Liquor#readme"
+  "homepage": "https://github.com/Crippler93/Liquor#readme",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "inquirer": "^7.0.0"
+  }
 }

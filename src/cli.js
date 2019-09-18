@@ -1,5 +1,6 @@
 const arg = require('arg');
 const inquirer = require('inquirer')
+import { createProject } from "./main";
 
 function parseArgs(rawArgs) {
     const args = arg(
@@ -13,6 +14,7 @@ function parseArgs(rawArgs) {
     );
     return {
         completeDbURL: args['--dbUrl'] || false,
+        template: args._[0],
     };
 }
 
@@ -58,5 +60,6 @@ module.exports = {
         let options = parseArgs(args);
         options = await promptForMissingArgs(options);
         console.log(options);
+        await createProject(options);
     }
 }
